@@ -15,4 +15,14 @@ Content-Type: application/json
   "name": "Product D"
 }
 
+### Update Product
+PUT http://a.localhost/products/effa0161-9908-4019-b8b2-32c1a62d75a7
+Content-Type: application/json
 
+{
+  "name": "Product D"
+}
+
+### Delete Product
+DELETE http://a.localhost/products/effa0161-9908-4019-b8b2-32c1a62d75a7
+Accept: application/json
