@@ -3,6 +3,7 @@ import { DataSource } from 'typeorm';
 import { Tenant } from 'src/domain/tenant/tenant.entity';
 import { User } from 'src/domain/user/user.entity';
 import { AccessLog } from 'src/domain/logs/access-log.entity';
+import { Product } from 'src/domain/product/product.entity';
 
 @Injectable()
 export class TenantDatabaseService {
@@ -47,7 +48,7 @@ export class TenantDatabaseService {
         const conn = new DataSource({
             type: 'postgres',
             url: tenant.connection_string,
-            entities: [User,AccessLog],
+            entities: [User,AccessLog,Product],
             synchronize: true,
         });
 
